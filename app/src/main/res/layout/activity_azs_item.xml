@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
+    <ru.pichesky.rosneft.extension.CustomScrollView
+        android:id="@+id/activity_azs_item_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_azs_item_bottom_LL"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/activity_azs_item_map"
+                android:name="ru.pichesky.rosneft.extension.MySupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/azs_item_map_height"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                style="@style/SidePadding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        layout="@layout/view_azs_list_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/activity_azs_item_btn_route"
+                        android:layout_toStartOf="@+id/activity_azs_item_btn_route" />
+
+                    <ImageButton
+                        android:id="@+id/activity_azs_item_btn_route"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_btn_route" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/activity_azs_item_btn_fav"
+                    style="@style/FlatButtonStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:drawableLeft="@drawable/ic_btn_add_to_fav"
+                    android:drawableStart="@drawable/ic_btn_add_to_fav"
+                    android:drawablePadding="8dp"
+                    android:text="@string/caps_add_to_fav"
+                    android:textColor="@color/color_accent"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/small_margin">
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:id="@+id/activity_azs_price_title"
+                        style="@style/text_12_black_54"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:text="@string/fuel_prices" />
+
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_azs_price_date"
+                        android:textSize="12sp"
+                        android:textColor="@color/color_accent_light"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_toRightOf="@+id/activity_azs_price_title"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:text="актуальны на" />
+
+                </RelativeLayout>
+
+
+                <TableLayout
+                    android:id="@+id/activity_azs_item_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ru.pichesky.rosneft.extension.CustomScrollView>
+
+    <LinearLayout
+        android:id="@+id/activity_azs_item_bottom_LL"
+        style="@style/ContentPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_accent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/activity_azs_item_btn_feedback"
+            style="@style/AzsItemBtnBottom"
+            android:layout_weight="1.1"
+            android:drawableLeft="@drawable/ic_btn_feedback"
+            android:drawableStart="@drawable/ic_btn_feedback"
+            android:text="@string/caps_write_feedback" />
+
+        <Button
+            android:id="@+id/activity_azs_item_btn_hot_line"
+            style="@style/AzsItemBtnBottom"
+            android:drawableLeft="@drawable/ic_btn_hot_line"
+            android:drawableStart="@drawable/ic_btn_hot_line"
+            android:text="@string/caps_hot_line" />
+    </LinearLayout>
+</RelativeLayout>

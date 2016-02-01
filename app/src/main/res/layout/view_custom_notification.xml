@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_image"
+        android:layout_width="@dimen/push_image_layout_size"
+        android:layout_height="@dimen/push_image_layout_size"
+        android:background="@color/holo_push_image_background">
+
+        <ImageView
+            android:id="@+id/ic_image"
+            android:layout_width="@dimen/ic_size"
+            android:layout_height="@dimen/ic_size"
+            android:layout_margin="@dimen/small_margin"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_toRightOf="@+id/layout_image"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_16_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/time"
+                style="@style/text_14_white_54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="right|bottom"
+                android:maxLength="5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/text_14_white_70"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2" />
+    </LinearLayout>
+</RelativeLayout>

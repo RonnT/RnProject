@@ -1,0 +1,108 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.19.1'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+def appId = 'ru.pichesky.rosneft'
+def versionPropsFile = file('version.properties')
+def versCode = 1
+
+if (versionPropsFile.canRead()) {
+    def Properties versionProps = new Properties()
+
+    versionProps.load(new FileInputStream(versionPropsFile))
+    versCode = versionProps['VERSION_CODE'].toInteger();
+    def runTasks = gradle.startParameter.taskNames
+    if ('assemble' in runTasks || 'assembleRelease' in runTasks || 'aR' in runTasks
+            || 'send_apk_to_repo' in runTasks) {
+        versCode = versionProps['VERSION_CODE'].toInteger() + 1
+
+        if ('send_apk_to_repo' in runTasks) {
+            versionProps['VERSION_CODE'] = versCode.toString()
+            versionProps.store(versionPropsFile.newWriter(), null)
+        }
+    }
+} else {
+    throw new GradleException("Could not read version.properties!")
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId appId
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode versCode
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.android.support:cardview-v7:22.2.1'
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'org.slf4j:slf4j-simple:1.6.1'
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.2.0'
+    compile 'com.mcxiaoke.volley:library:1.0.15'
+    compile 'com.pnikosis:materialish-progress:1.4'
+    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile('org.apache.httpcomponents:httpmime:4.3.6') {
+        exclude module: 'httpclient'
+    }
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5'
+    compile 'com.google.android.gms:play-services-maps:7.5.0'
+    compile 'com.google.android.gms:play-services-gcm:7.5.0'
+    compile 'com.google.android.gms:play-services-location:7.5.0'
+    compile 'com.google.maps.android:android-maps-utils:0.3.4'
+    compile 'com.daimajia.swipelayout:library:1.1.8@aar'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+        transitive = true;
+    }
+
+}
+
+task send_apk_to_repo(type:Exec) {
+    File apkRelease = file('build/outputs/apk/app-release.apk');
+    workingDir '../'
+
+    commandLine 'python'
+    args = ['send_apk_to_repo.py', appId, apkRelease.absolutePath, 'Убран клик по акциям/товарам если поля пустые. API: rn-brand.sitesoft.ru']
+}
+
+send_apk_to_repo.dependsOn 'assembleRelease'

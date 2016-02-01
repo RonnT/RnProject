@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SidePadding"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:elevation="2dp"
+    android:background="@android:color/white"
+    tools:ignore="UnusedAttribute">
+
+    <Spinner
+        android:id="@+id/view_filters_fuel_spinner"
+        android:theme="@style/FilterSpinnerTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:dropDownSelector="@drawable/dropdown_item_bg_selector"
+        android:layout_marginRight="@dimen/standart_margin"
+        android:layout_marginEnd="@dimen/standart_margin"
+        android:dropDownVerticalOffset="@dimen/fuel_dropdown_vertical_offset"/>
+
+    <LinearLayout
+        android:id="@+id/view_filters_services_LL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/view_filters_btn_wash"
+            style="@style/BtnFilter"
+            android:src="@drawable/ic_filter_wash_active" />
+
+        <ImageButton
+            android:id="@+id/view_filters_btn_service"
+            style="@style/BtnFilter"
+            android:src="@drawable/ic_filter_service_active" />
+
+        <ImageButton
+            android:id="@+id/view_filters_btn_cafe"
+            style="@style/BtnFilter"
+            android:src="@drawable/ic_filter_cafe_active" />
+
+        <ImageButton
+            android:id="@+id/view_filters_btn_shop"
+            style="@style/BtnFilter"
+            android:src="@drawable/ic_filter_shop_active" />
+    </LinearLayout>
+
+</RelativeLayout>

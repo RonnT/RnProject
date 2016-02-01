@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#FFD200</color>
+    <color name="color_primary_dark">#000000</color>
+    <color name="color_accent">#E9671D</color>
+    <color name="color_accent_light">#F89728</color>
+
+    <!-- Text colors -->
+    <color name="black_54">#8A000000</color>
+    <color name="black_87">#DE000000</color>
+
+    <color name="black_20_opacity">#32000000</color>
+    <color name="black_30_opacity">#48000000</color>
+    <color name="black_40_opacity">#66000000</color>
+    <color name="black_50_opacity">#80000000</color>
+    <color name="black_73_opacity">#74000000</color>
+    <color name="black_80_opacity">#CC000000</color>
+    <color name="black_90_opacity">#E6000000</color>
+
+    <color name="white_54">#8AFFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="background">#2E619C</color>
+    <color name="background_gray">#EEEEEE</color>
+    <color name="flat_highlight">#80999999</color>
+
+    <color name="list_divider">#19000000</color>
+
+    <color name="azs_opened">#478F2C</color>
+    <color name="light_hint_text">#4DFFFFFF</color>
+
+    <color name="azs_tnk_color">#1C296D</color>
+
+    <color name="intro_bg">#161f30</color>
+    <color name="holo_push_image_background">#1d3741</color>
+</resources>

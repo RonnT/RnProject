@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="left_menu_titles">
+        <item>@string/left_menu_0</item>
+        <item>@string/left_menu_1</item>
+        <item>@string/left_menu_2</item>
+        <item>@string/left_menu_3</item>
+    </string-array>
+
+    <string-array name="left_menu_icons">
+        <item>@drawable/ic_menu_azs</item>
+        <item>@drawable/ic_menu_fav</item>
+        <item>@drawable/ic_menu_events</item>
+        <item>@drawable/ic_menu_about</item>
+        <item>@drawable/ic_menu_azs_active</item>
+        <item>@drawable/ic_menu_fav_active</item>
+        <item>@drawable/ic_menu_events_active</item>
+        <item>@drawable/ic_menu_about_active</item>
+    </string-array>
+
+    <string-array name="azs_tab_titles">
+        <item>@string/caps_on_map</item>
+        <item>@string/caps_on_list</item>
+    </string-array>
+
+    <string-array name="fuel_types">
+        <item>@string/fuel_92</item>
+        <item>@string/fuel_95</item>
+        <item>@string/fuel_98</item>
+        <item>@string/fuel_dt</item>
+        <item>@string/fuel_gas</item>
+    </string-array>
+</resources>

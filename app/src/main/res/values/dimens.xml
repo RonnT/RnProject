@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="filters_elevation">2dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <dimen name="corners_price">2dp</dimen>
+    <dimen name="corners_clustered_count">10dp</dimen>
+
+    <dimen name="standart_margin">16dp</dimen>
+    <dimen name="standart_padding">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+
+    <dimen name="ic_size">48dp</dimen>
+
+    <dimen name="azs_list_item_text_left_margin">56dp</dimen>
+
+    <dimen name="button_corner_radius">4dp</dimen>
+
+    <dimen name="swipe_progress_bar_height">8dp</dimen>
+
+    <dimen name="fuel_dropdown_vertical_offset">-56dp</dimen>
+
+    <!-- Lists -->
+    <dimen name="list_item_single_line_height">48dp</dimen>
+    <dimen name="list_item_text_left_margin">72dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+
+    <!-- Map -->
+    <dimen name="azs_cluster_image">48dp</dimen>
+    <dimen name="azs_cluster_padding">47dp</dimen>
+    <dimen name="azs_item_map_padding">24dp</dimen>
+    <dimen name="fab_mini_margin_right">24dp</dimen>
+    <dimen name="azs_item_map_height">130dp</dimen>
+
+    <dimen name="drawer_right_edge_margin">56dp</dimen>
+    <dimen name="dialog_view_side_padding">24dp</dimen>
+
+    <dimen name="not_matter_size">10000dp</dimen>
+    <dimen name="product_icon_height">56dp</dimen>
+
+    <dimen name="snack_min_height">88dp</dimen>
+
+    <dimen name="push_image_layout_size">64dp</dimen>
+
+    <!-- Circle indicator -->
+    <dimen name="indicator_size">20dp</dimen>
+    <dimen name="indicator_padding">5dp</dimen>
+    <dimen name="indicator_view_width">100dp</dimen>
+    <dimen name="indicator_view_height">46dp</dimen>
+
+</resources>

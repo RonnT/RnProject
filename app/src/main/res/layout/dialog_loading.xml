@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_80_opacity"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:matProg_spinSpeed="0.8"
+        app:matProg_barColor="@color/color_primary"
+        app:matProg_progressIndeterminate="true" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/loading_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        app:typeface="roboto_regular" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/ab_search"
+        android:icon="@drawable/ic_ab_search"
+        android:title="@string/regions_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+    <item
+        android:id="@+id/ab_current_region"
+        android:icon="@drawable/ic_ab_my_reg"
+        android:title="@string/current_region"
+        app:showAsAction="always">
+    </item>
+
+</menu>

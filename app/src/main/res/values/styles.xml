@@ -1,0 +1,180 @@
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="SideMargin">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">16dp</item>
+    </style>
+
+    <style name="SidePadding">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingEnd" tools:ignore="NewApi">16dp</item>
+    </style>
+
+    <style name="ContentPadding" parent="SidePadding">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="IntroTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="SimpleTextView" parent="IntroTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="Text_14_White_87" parent="SimpleTextView">
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_16_black_87">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black_87</item>
+        <item name="typeface">roboto_regular</item>
+    </style>
+
+    <style name="text_12_black_87" parent="text_16_black_87">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_12_black_54" parent="text_16_black_54">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_16_black_54" parent="text_16_black_87">
+        <item name="android:textColor">@color/black_54</item>
+    </style>
+
+    <style name="text_14_black_73" parent="text_16_black_87">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_73_opacity</item>
+    </style>
+
+    <style name="text_14_black_87" parent="text_16_black_87">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_14_black_54" parent="text_16_black_87">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_54</item>
+    </style>
+
+    <style name="text_16_white" parent="text_16_black_87">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="text_14_white" parent="text_16_white">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_12_white_70" parent="text_14_white">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white_70</item>
+    </style>
+
+    <style name="text_14_white_54" parent="text_14_white">
+        <item name="android:textColor">@color/white_54</item>
+    </style>
+
+    <style name="text_14_white_70" parent="text_14_white">
+        <item name="android:textColor">@color/white_70</item>
+    </style>
+
+    <style name="price_big" parent="text_16_black_87">
+        <item name="android:textSize">20dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="price_small" parent="text_16_black_87">
+        <item name="android:textSize">12dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="BtnFilter" parent="android:Widget.ImageButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="DialogBottomButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/black_87</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MapFabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentEnd" tools:ignore="NewApi">true</item>
+        <item name="android:theme">@style/MapFabTheme</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">6dp</item>
+        <item name="fabSize">normal</item>
+        <item name="pressedTranslationZ">6dp</item>
+    </style>
+
+    <style name="MapFabMiniStyle" parent="MapFabStyle">
+        <item name="fabSize">mini</item>
+        <item name="android:layout_marginTop">@dimen/standart_margin</item>
+        <item name="android:layout_marginRight">@dimen/fab_mini_margin_right</item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/fab_mini_margin_right</item>
+    </style>
+
+    <style name="FlatButton" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:theme">@style/FlatButtonStyle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.OnBlueTextInputLayout" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:textColorHint">@color/light_hint_text</item>
+    </style>
+
+    <style name="DialogViewSidePadding">
+        <item name="android:paddingLeft">@dimen/dialog_view_side_padding</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">@dimen/dialog_view_side_padding</item>
+        <item name="android:paddingRight">@dimen/dialog_view_side_padding</item>
+        <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/dialog_view_side_padding</item>
+    </style>
+
+    <style name="RegionSpinnerStyle" parent="@android:style/Widget.Spinner" />
+
+    <style name="EventCardViewText" parent="text_14_black_73">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+</resources>

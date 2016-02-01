@@ -1,0 +1,172 @@
+<resources>
+    <string name="app_name">Роснефть</string>
+
+    <!-- LoadingDialog -->
+    <string name="loading">Загрузка…</string>
+
+    <string name="drawer_open">Меню</string>
+    <string name="drawer_close">@string/app_name</string>
+
+    <!-- LocationHelper -->
+    <string name="location_m_postfix">" м"</string>
+    <string name="location_km_postfix">" км"</string>
+    <string name="question_enable_gps">Включить GPS?</string>
+    <string name="question_enable_location">Включить геоданные?</string>
+    <string name="need_gps">Для более точного определения вашего местоположения, необходимо включить GPS.</string>
+    <string name="need_location">Для более точного определения вашего местоположения, необходимо включить передачу геоданных.</string>
+    <string name="cant_find_loc">Не удалось определить Ваше местоположение</string>
+    <string name="enable">РАЗРЕШИТЬ</string>
+    <string name="cancel">ОТМЕНА</string>
+
+    <!-- ShareHelper -->
+    <string name="share">Поделиться</string>
+
+    <!-- Network -->
+    <string name="error_check_connection">Проверьте интернет-соединение</string>
+    <string name="volley_connection_error">ERROR: check internet connection</string>
+
+    <!-- Route -->
+    <string name="route_intent_1">http://maps.google.com/maps?saddr=</string>
+    <string name="route_intent_2">@string/comma</string>
+    <string name="route_intent_3">&amp;daddr=</string>
+    <string name="route_intent_4">@string/comma</string>
+    <string name="comma">,</string>
+    <string name="not_enough_data_to_create_route">Не хватает данных для построения маршрута</string>
+
+    <string name="no_data">Нет данных</string>
+
+    <!-- AZS screen -->
+    <string name="caps_on_map">НА КАРТЕ</string>
+    <string name="caps_on_list">СПИСКОМ</string>
+
+    <!-- Events screen -->
+    <string name="caps_events">ПРЕДЛОЖЕНИЯ</string>
+    <string name="caps_products">ТОВАРЫ</string>
+    <string name="events_federal">Федеральные</string>
+    <string name="events_regional">Региональные</string>
+    <string name="product_title">Товар</string>
+    <string name="event_title">Акция</string>
+    <string name="read_more_caps">ПОДРОБНЕЕ</string>
+    
+    <!-- Left menu -->
+    <string name="left_menu_0">АЗС Роснефть</string>
+    <string name="left_menu_1">Избранное</string>
+    <string name="left_menu_2">Акции</string>
+    <string name="left_menu_3">О компании</string>
+
+    <!-- Balancer -->
+    <string name="proto_postfix">://</string>
+
+    <!-- Filter_fuel -->
+    <string name="fuel_92">92</string>
+    <string name="fuel_95">95</string>
+    <string name="fuel_98">98</string>
+    <string name="fuel_dt">ДТ</string>
+    <string name="fuel_gas">Газ</string>
+    <string name="fuel_dt_for_api">diesel</string>
+    <string name="fuel_gas_for_api">gas</string>
+    <string name="error_no_location">Не удалось определить Ваше местоположение</string>
+    <string name="error_no_azs_by_filter">АЗС по выбранным критериям не найдено</string>
+    <string name="zero">0</string>
+    <string name="zeros">00</string>
+    <string name="azs_count_prefix">x</string>
+    <string name="current_location">Текущее местоположение</string>
+
+    <!-- AboutFragment -->
+    <string name="html_start"><![CDATA[ <html> ]]></string>
+    <string name="html_style">
+        <![CDATA[
+        <head>
+        <link href=\"style/about_style.css\" type=\"text/css\" rel=\"stylesheet\" />
+        </head>
+        ]]>
+    </string>
+    <string name="html_body_start"><![CDATA[ <body> ]]></string>
+    <string name="html_div_about"><![CDATA[ <div class=\"about\"> ]]></string>
+    <string name="html_image"><![CDATA[ <img src=\"%s\" class=\"about-img\" /> ]]></string>
+    <string name="html_div_text"><![CDATA[<div class=\"about-text\">]]></string>
+    <string name="html_div_end"><![CDATA[</div>]]></string>
+    <string name="html_body_end"><![CDATA[ </body> ]]></string>
+    <string name="html_end"><![CDATA[ </html> ]]></string>
+	
+    <string name="error_unknown">Произошла неизвестная ошибка</string>
+    <string name="caps_add_to_fav">ДОБАВИТЬ В ИЗБРАННОЕ</string>
+    <string name="caps_remove_from_fav">УДАЛИТЬ ИЗ ИЗБРАННОГО</string>
+    <string name="try_again">Повторить</string>
+
+    <!-- Azs Item Activity -->
+    <string name="caps_azs">АЗС</string>
+    <string name="opened">Открыто</string>
+    <string name="closed">Закрыто</string>
+    <string name="schedule_fulltime">Работает круглосуточно</string>
+    <string name="schedule_from">"c "</string>
+    <string name="schedule_to">" до "</string>
+    <string name="fuel_prices">Цены на топливо: </string>
+    <string name="fuel_prices_actual_on">"актуальны на "</string>
+
+    <string name="day_1">mon</string>
+    <string name="day_2">tue</string>
+    <string name="day_3">wed</string>
+    <string name="day_4">thu</string>
+    <string name="day_5">fri</string>
+    <string name="day_6">sut</string>
+    <string name="day_7">sun</string>
+    <string name="caps_write_feedback">НАПИСАТЬ ОТЗЫВ</string>
+    <string name="caps_hot_line">ГОРЯЧАЯ ЛИНИЯ</string>
+    <string name="hot_line_number">88002001070</string>
+
+    <string name="rate_phone">Телефон</string>
+    <string name="send_rate">Написать отзыв</string>
+    <string name="btn_rate_send">ОТПРАВИТЬ</string>
+    <string name="btn_rate_cancel">ОТМЕНА</string>
+    <string name="need_rating_overall">Необходимо указать оценку</string>
+
+    <string name="rating_name_overall">Оценка</string>
+    <string name="rating_name_service">Обслуживание</string>
+    <string name="rating_name_waiting_time">Время ожидания</string>
+    <string name="rating_name_fuel_quality">Качество топлива</string>
+    <string name="rating_name_fuel_price">Цена на топливо</string>
+    <string name="rating_name_shop_price">Цены в магазине</string>
+    <string name="error_field_empty">Заполните поле</string>
+    <string name="error_phone_format">Неверный формат номера</string>
+    <string name="error_empty_fields">Необходимо заполнить все поля</string>
+    <string name="error_need_rate">Необходимо указать оценку</string>
+    <string name="caps_save">СОХРАНИТЬ</string>
+    <string name="sending">Отправка...</string>
+    <string name="error_try_again">Ошибка. Попробуйте позже</string>
+    <string name="rate_sent">Отзыв отправлен</string>
+    <string name="rate_comment">Комментарий</string>
+    <string name="rate_add_title">Доп. оценки</string>
+    <string name="error_loading_data_try_again">Ошибка загрузки данных. Попробуйте позже</string>
+
+    <!-- RegionsActivity -->
+    <string name="regions_selector_title">Ваш регион</string>
+    <string name="regions_search">Регион</string>
+    <string name="current_region">Текущий регион</string>
+    <string name="error_determine_region">Невозможно определить регион</string>
+    <string name="caps_route_to_closest_azs">МАРШРУТ ДО БЛИЖАЙШЕЙ АЗС</string>
+    <string name="no_closest_azs">АЗС в радиусе 20км не обнаружено</string>
+    <string name="determine_region">Определение региона...</string>
+    <string name="cant_find_region">Регион не найден</string>
+
+    <string name="phone_code_starts">+7 (</string>
+    <string name="phone_code_ends">)\u0020</string>
+    <string name="phone_space">\u0020</string>
+    
+    <!-- FavoriteListFragment -->
+    <string name="until_have_no_fav">У Вас пока нет избранного</string>
+    <string name="add_azs_fav">Добавляйте заправки в \"Избранное\"\nсоответствующей кнопкой на экране заправки</string>
+    <string name="what_do_it"> </string>
+
+    <string name="prefix_image">/image/</string>
+    <string name="image_lock_ratio_suffix">x</string>
+    <string name="image_unlock_ratio_suffix">xx</string>
+    <string name="prefix_api">/api/v2/</string>
+
+    <!-- Pushes -->
+    <string name="push_title">АЗС Роснефть</string>
+    <string name="snack_detail">ПОДРОБНЕЕ</string>
+    <string name="close">ЗАКРЫТЬ</string>
+    <string name="ok">ОК</string>
+
+</resources>

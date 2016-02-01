@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:superlistview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ru.pichesky.rosneft.extension.SuperSwipeRecyclerView
+        android:id="@+id/fragment_list_base_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_gray"
+        android:clickable="true"
+        android:focusable="true"
+        superlistview:superlv__empty="@layout/view_base_list_empty"
+        superlistview:superlv__listClipToPadding="false"
+        superlistview:superlv__moreProgress="@layout/view_base_list_more_progress"
+        superlistview:superlv__scrollbarStyle="outsideOverlay" />
+</FrameLayout>

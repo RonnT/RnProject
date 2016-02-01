@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/view_rate_item_name"
+        style="@style/text_12_black_54"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:text="@string/rating_name_overall" />
+
+    <RatingBar
+        android:id="@+id/view_rate_item_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:numStars="5"
+        android:progressDrawable="@drawable/rating_star_selector"
+        android:stepSize="0.1" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.pichesky.rosneft.fragment.about.AboutFragment">
+
+    <WebView
+        android:id="@+id/about_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/about_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            style="@style/text_14_black_54"
+            android:paddingLeft="@dimen/standart_margin"
+            android:paddingRight="@dimen/standart_margin"
+            android:text="@string/error_loading_data_try_again"
+            app:typeface="roboto_regular" />
+
+        <Button
+            android:id="@+id/about_try_again_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/try_again" />
+    </LinearLayout>
+
+
+    <include layout="@layout/elevation_view" />
+
+</RelativeLayout>

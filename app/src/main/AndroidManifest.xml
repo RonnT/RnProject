@@ -1,0 +1,105 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.pichesky.rosneft">
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="ru.sitesoft.rnbrands.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="ru.pichesky.rosneft.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:name="ru.pichesky.rosneft.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDWNI2EGEnD57Cwtdxs3SIDCImQILYWmOs" />
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.ProductItemActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.EventItemActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.AzsItemActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.rate.AzsRateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.rate.AzsRateAdditionalActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="ru.pichesky.rosneft.activity.RegionSelectorActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7f693001f7f0c2ea0f17cc385f551bacaa504761" />
+
+        <receiver
+            android:name="ru.pichesky.rosneft.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="ru.pichesky.rosneft" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="ru.pichesky.rosneft.gcm.GcmIntentService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

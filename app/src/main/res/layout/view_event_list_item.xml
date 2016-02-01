@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_event_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/standart_margin"
+    app:contentPaddingTop="24dp"
+    app:contentPaddingBottom="@dimen/small_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/view_event_name"
+            style="@style/EventCardViewText"
+            app:typeface="roboto_regular"/>
+
+        <ImageView
+            android:id="@+id/view_event_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="@dimen/standart_margin"/>
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/view_event_title"
+            style="@style/EventCardViewText"
+            app:typeface="roboto_regular"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/view_event_button"
+            style="@style/FlatButton"
+            android:text="@string/read_more_caps"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:textColor="@color/color_accent"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

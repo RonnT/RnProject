@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/ic_size"
+        android:layout_height="@dimen/ic_size"
+        android:src="@drawable/ic_map_azs_clustered" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/view_map_azs_clustered_count"
+        style="@style/text_14_black_87"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/small_margin"
+        android:paddingLeft="@dimen/small_margin"
+        android:text="@string/azs_count_prefix"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"/>
+</RelativeLayout>

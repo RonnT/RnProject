@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="ru.pichesky.rosneft.extension.MySupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fragment_map_base_btn_zoom_in"
+        style="@style/MapFabMiniStyle"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/ic_btn_zoom_in" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fragment_map_base_btn_zoom_out"
+        style="@style/MapFabMiniStyle"
+        android:layout_below="@+id/fragment_map_base_btn_zoom_in"
+        android:src="@drawable/ic_btn_zoom_out" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fragment_map_base_btn_my_loc"
+        style="@style/MapFabStyle"
+        android:layout_above="@+id/fragment_azs_map_bottom_LL"
+        android:layout_margin="@dimen/standart_margin"
+        android:src="@drawable/btn_my_loc_selector" />
+
+    <LinearLayout
+        android:id="@+id/fragment_azs_map_bottom_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <Button
+            android:id="@+id/fragment_azs_map_btn_route_to_closest"
+            style="@style/FlatButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawableLeft="@drawable/ic_btn_route_to_closest"
+            android:drawableStart="@drawable/ic_btn_route_to_closest"
+            android:gravity="center|center_vertical"
+            android:text="@string/caps_route_to_closest_azs"
+            android:textColor="@color/color_accent" />
+    </LinearLayout>
+</RelativeLayout>

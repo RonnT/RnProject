@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="@dimen/standart_margin"
+    android:paddingEnd="@dimen/standart_margin"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@drawable/list_item_bg_selector">
+
+    <LinearLayout
+        android:id="@+id/price_LL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        style="@style/SideMargin">
+
+        <include
+            layout="@layout/view_price_type_0"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/price_LL"
+        android:layout_toRightOf="@+id/price_LL"
+        android:orientation="vertical">
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/view_azs_list_item_address"
+            style="@style/text_16_black_87"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="г.Екатеринбург"
+            app:typeface="roboto_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/view_azs_list_item_services_LL"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:id="@+id/view_azs_list_item_distance"
+                style="@style/text_14_black_54"
+                android:text="2,7 км"
+                android:textColor="@color/black_54"
+                app:typeface="roboto_regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

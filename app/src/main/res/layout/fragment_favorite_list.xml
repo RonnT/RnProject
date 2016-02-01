@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ru.pichesky.rosneft.fragment.favorite.FavoriteListFragment">
+
+    <include layout="@layout/elevation_view" />
+
+    <include
+        android:id="@+id/fav_filters"
+        layout="@layout/view_filters"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/favorite_empty_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_gray"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp"
+                android:src="@drawable/bg_start_fav" />
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:id="@+id/empty_bg_header"
+                style="@style/text_16_black_87"
+                android:singleLine="true"
+                android:text="@string/until_have_no_fav"
+                app:typeface="roboto_regular" />
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:id="@+id/empty_bg_body"
+                style="@style/text_12_black_54"
+                android:gravity="center"
+                android:text="@string/add_azs_fav"
+                app:typeface="roboto_regular" />
+
+        </LinearLayout>
+
+        <include layout="@layout/elevation_view" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/favorites_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true" />
+
+</LinearLayout>

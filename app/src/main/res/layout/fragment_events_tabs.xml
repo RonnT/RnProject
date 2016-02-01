@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="UnusedAttribute">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragment_tabs_base_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/TabLayoutTheme" />
+
+    <include layout="@layout/elevation_view" />
+
+    <LinearLayout
+        android:id="@+id/regions_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="2dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/regions_button"
+            style="@style/FlatButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_single_line_height"
+            android:clickable="true"
+            android:paddingRight="@dimen/standart_margin"
+            android:paddingEnd="@dimen/standart_margin"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ru.pichesky.rosneft.extension.CustomViewPager
+            android:id="@+id/fragment_tabs_base_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="-2dp"/>
+
+        <include layout="@layout/elevation_view" />
+
+    </RelativeLayout>
+
+</LinearLayout>
