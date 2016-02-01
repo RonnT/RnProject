@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ru.pichesky.rosneft.extension.CustomViewPager
+        <top.titov.gas.extension.CustomViewPager
             android:id="@+id/fragment_tabs_base_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

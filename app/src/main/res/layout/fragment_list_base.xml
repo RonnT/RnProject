@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ru.pichesky.rosneft.extension.SuperSwipeRecyclerView
+    <top.titov.gas.extension.SuperSwipeRecyclerView
         android:id="@+id/fragment_list_base_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

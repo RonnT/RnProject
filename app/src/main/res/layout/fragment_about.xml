@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.pichesky.rosneft.fragment.about.AboutFragment">
+    tools:context="top.titov.gas.fragment.about.AboutFragment">
 
     <WebView
         android:id="@+id/about_web_view"

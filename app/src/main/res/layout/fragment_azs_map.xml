@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/map"
-        android:name="ru.pichesky.rosneft.extension.MySupportMapFragment"
+        android:name="top.titov.gas.extension.MySupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MapsActivity" />

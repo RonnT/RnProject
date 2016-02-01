@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ru.pichesky.rosneft.fragment.favorite.FavoriteListFragment">
+    tools:context="top.titov.gas.fragment.favorite.FavoriteListFragment">
 
     <include layout="@layout/elevation_view" />
 

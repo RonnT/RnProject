@@ -15,7 +15,7 @@ repositories {
 }
 
 
-def appId = 'ru.pichesky.rosneft'
+def appId = 'top.titov.gas'
 def versionPropsFile = file('version.properties')
 def versCode = 1
 
@@ -54,7 +54,6 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

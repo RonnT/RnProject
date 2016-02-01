@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ru.pichesky.rosneft.extension.CustomTextInputLayout
+                <top.titov.gas.extension.CustomTextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="-4dp"
@@ -54,9 +54,9 @@
                         android:textColor="@color/black_87" />
 
                     <requestFocus />
-                </ru.pichesky.rosneft.extension.CustomTextInputLayout>
+                </top.titov.gas.extension.CustomTextInputLayout>
 
-                <ru.pichesky.rosneft.extension.CustomTextInputLayout
+                <top.titov.gas.extension.CustomTextInputLayout
                     android:id="@+id/text_input_L"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                         android:inputType="textCapSentences|textMultiLine"
                         android:maxLines="3"
                         android:textColor="@color/black_87" />
-                </ru.pichesky.rosneft.extension.CustomTextInputLayout>
+                </top.titov.gas.extension.CustomTextInputLayout>
             </LinearLayout>
 
             <RelativeLayout

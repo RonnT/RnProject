@@ -3,7 +3,7 @@
     android:layout_width="@dimen/indicator_view_width"
     android:layout_height="@dimen/indicator_view_height">
 
-    <ru.pichesky.rosneft.extension.IndicatorView
+    <top.titov.gas.extension.IndicatorView
         android:id="@+id/indicator_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +18,7 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
         </LinearLayout>
-    </ru.pichesky.rosneft.extension.IndicatorView>
+    </top.titov.gas.extension.IndicatorView>
 
     <ImageView
         android:layout_width="wrap_content"
