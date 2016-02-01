@@ -70,7 +70,7 @@ public class CONST {
             MAX_PHOTO_NUMBER_IN_QUERY   = 10,
 
             ANIMATION_BURGER_TIME       = 500,
-            DEFAULT_REGION              = 77,
+            DEFAULT_REGION              = 32,
             REQ_CODE_SELECT_REGION      = 1,
 
             AZS_TYPE_0                  = 0,

@@ -1,25 +1,19 @@
 package top.titov.gas.model.azs;
 
-import com.google.gson.annotations.SerializedName;
-
+import java.util.List;
 
 /**
  * Created by Roman Titov on 03.11.2015.
  */
 public class AzsWrapper {
 
-    @SerializedName("error_code")
-    private int mErrorCode;
+    private List<Azs> stations;
 
-    @SerializedName("error_name")
-    private String mErrorName;
-
-    private Data data;
-
-    private class Data{
-        private Azs station;
-    }
     public Azs getAzs(){
-        return data.station;
+        return new Azs();
+    }
+
+    public List<Azs> getAzsList(){
+        return stations;
     }
 }

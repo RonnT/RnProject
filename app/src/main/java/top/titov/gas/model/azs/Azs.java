@@ -43,8 +43,11 @@ public class Azs implements ClusterItem, Serializable {
     private static final String CAFE = "cafe";
     private static final String TIRE = "tire";
 
-    @DatabaseField(id = true)
-    private int id;
+    @DatabaseField(generatedId = true)
+    private int ids;
+
+    @DatabaseField()
+    private String id;
 
     @DatabaseField
     private String name;
@@ -62,10 +65,26 @@ public class Azs implements ClusterItem, Serializable {
     private String email;
 
     @DatabaseField
-    private double lat;
+    private String lat;
 
     @DatabaseField
-    private double lng;
+    private String lng;
+
+    @DatabaseField(columnName = "reg_price")
+    @SerializedName("reg_price")
+    private String regPrice;
+
+    @DatabaseField(columnName = "mid_price")
+    @SerializedName("mid_price")
+    private String midPrice;
+
+    @DatabaseField(columnName = "pre_price")
+    @SerializedName("pre_price")
+    private String prePrice;
+
+    @DatabaseField(columnName = "diesel_price")
+    @SerializedName("diesel_price")
+    private String dieselPrice;
 
     @DatabaseField(defaultValue = "false")
     private boolean isFavorite;
@@ -106,9 +125,9 @@ public class Azs implements ClusterItem, Serializable {
     @SerializedName("services")
     private ServiceAvailable serviceAvailable;
 
-    private String action;
+    private String action = ACTION_ADD;
 
-    private float distance;
+    private float distances;
 
     private transient Location mLocation = null;
 
@@ -127,7 +146,7 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public int getId() {
-        return id;
+        return Integer.getInteger(id);
     }
 
     public String getName() {
@@ -151,11 +170,11 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public double getLat() {
-        return lat;
+        return Double.valueOf(lat);
     }
 
     public double getLng() {
-        return lng;
+        return Double.valueOf(lng);
     }
 
     public void setIsFavorite(boolean isFavorite) {
@@ -184,30 +203,30 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public float getDistance() {
-        return distance;                               //TODO calculate distance
+        return distances;                               //TODO calculate distance
     }
 
     public Location getLocation() {
         if (mLocation != null) return mLocation;
 
         mLocation = new Location("Point");
-        mLocation.setLatitude(lat);
-        mLocation.setLongitude(lng);
+        mLocation.setLatitude(getLat());
+        mLocation.setLongitude(getLng());
 
         return mLocation;
     }
 
     public float getSelectedFuelPrice() {
-        return PriceItem.getPriceItemById(id).getPriceList().get(FilterHelper.getFuelTypeForApi());
+        return PriceItem.getPriceItemById(Integer.valueOf(id)).getPriceList().get(FilterHelper.getFuelTypeForApi());
     }
 
     public float getFuelPrice(String pFuelForHuman) {
-        return PriceItem.getPriceItemById(id).getPriceList().get(FilterHelper.getFuelTypeForApi(pFuelForHuman));
+        return PriceItem.getPriceItemById(Integer.valueOf(id)).getPriceList().get(FilterHelper.getFuelTypeForApi(pFuelForHuman));
     }
 
     public float getForaFuelPrice(String pFuelForHuman) {
         String latinFuelName = FilterHelper.getFuelTypeForApi(pFuelForHuman) + "_fora";
-        Map<String,Float> priceList = PriceItem.getPriceItemById(id).getPriceList();
+        Map<String,Float> priceList = PriceItem.getPriceItemById(Integer.valueOf(id)).getPriceList();
         float price = priceList.containsKey(latinFuelName) ? priceList.get(latinFuelName) : 0;
         return price;
     }
@@ -233,8 +252,6 @@ public class Azs implements ClusterItem, Serializable {
                 @Override
                 public Object call() throws Exception {
                     for (Azs azsItem : pAzsList) {
-                        if(azsItem.fuelAvailable != null )azsItem.copyFuelAvailable();
-                        if(azsItem.serviceAvailable != null)azsItem.copyServiceAvailable();
                         azsItem.update(sDao);
                     }
                     return null;
@@ -283,7 +300,7 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public boolean isUpdatedPrice(){
-        PriceItem priceItem = new PriceItem().getPriceItemById(id);
+        PriceItem priceItem = new PriceItem().getPriceItemById(Integer.valueOf(id));
         if(priceItem == null || priceItem.getLastUpdate() + CONST.FUEL_PRICE_UPDATE_INTERVAL < Utility.getCurrentTimestamp())
             return false;
         return true;
@@ -330,7 +347,7 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public void addFavorite() {
-        Favorites.saveFavorites(id);
+        Favorites.saveFavorites(Integer.valueOf(id));
         setIsFavorite(true);
         try {
             sDao.update(this);
@@ -340,7 +357,7 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public void removeFavorite() {
-        Favorites.deleteFavorites(id);
+        Favorites.deleteFavorites(Integer.valueOf(id));
         setIsFavorite(false);
         try {
             sDao.update(this);

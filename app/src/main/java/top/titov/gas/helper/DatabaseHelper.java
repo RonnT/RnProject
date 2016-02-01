@@ -16,7 +16,7 @@ import top.titov.gas.model.azs.PriceItem;
 
 public class DatabaseHelper extends SQLiteAssetHelper {
 
-    private static final String DATABASE_NAME = "rnbrends";
+    private static final String DATABASE_NAME = "gas";
     private static final int DATABASE_VERSION = 2; // because 1 - empty db, but we have to update it initially
 
     public DatabaseHelper(Context context) {

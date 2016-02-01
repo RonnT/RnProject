@@ -118,7 +118,7 @@ class SQLiteAssetHelper extends OrmLiteSqliteOpenHelper {
         }
 
         //TODO: for debug mode to get database dump
-        /*mDatabasePath = Environment.getExternalStorageDirectory() + "/Android/data/"
+       /* mDatabasePath = Environment.getExternalStorageDirectory() + "/Android/data/"
                 + MyApp.getAppContext().getPackageName();*/
 
 

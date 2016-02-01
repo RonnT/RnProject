@@ -350,6 +350,10 @@ public class Api {
         sendRequest(GET, buildUrl("fuel", params), pRL, pEL);
     }
 
+    public void getAzsList(Response.Listener<JSONObject> pRL, Response.ErrorListener pEL){
+        sendRequest(GET, "http://devapi.mygasfeed.com/stations/radius/42/-93/40/reg/distance/rfej9napna.json", pRL, pEL);
+    }
+
     /* TODO: do not delete this
     public void sendPhotosRequest(String pUrl, Map<String, String> pParams,
                                   List<Photo> pPhotos, Response.Listener<JSONObject> pRL,
@@ -377,4 +381,6 @@ public class Api {
         return request;
     }
     */
+
+
 }
