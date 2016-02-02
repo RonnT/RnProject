@@ -40,7 +40,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDWNI2EGEnD57Cwtdxs3SIDCImQILYWmOs" />
+            android:value="AIzaSyB5m9HjoRAv5LFdrHl2tfvbMuLewCj7SNQ" />
 
         <activity
             android:name="top.titov.gas.activity.SplashActivity"

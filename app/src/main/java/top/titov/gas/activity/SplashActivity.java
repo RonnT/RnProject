@@ -28,8 +28,9 @@ public class SplashActivity extends Activity implements Response.ErrorListener, 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Api.getInstance().getAzsList(this, this);
+        //Api.getInstance().getAzsList(this, this);
 
+        runNeededActivity();
 
     }
 
