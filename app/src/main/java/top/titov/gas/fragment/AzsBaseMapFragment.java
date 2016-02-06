@@ -34,7 +34,6 @@ import top.titov.gas.model.azs.Azs;
 import top.titov.gas.model.azs.PriceItem;
 import top.titov.gas.model.azs.PriceItemWrapper;
 import top.titov.gas.utils.CONST;
-import top.titov.gas.utils.api.Api;
 
 
 /**
@@ -51,8 +50,8 @@ public abstract class AzsBaseMapFragment
     private static int CAMERA_MOVE_REACT_THRESHOLD_MS = 500;
 
     private double
-            RUSSIA_LAT = 61.812337,
-            RUSSIA_LNG = 98.429688;
+            USA_LAT = 42.005018,
+            USA_LNG = -93.609851;
 
 
     protected GoogleMap mMap;
@@ -159,32 +158,8 @@ public abstract class AzsBaseMapFragment
 
 
     protected void setupClusterer() {
-        mClusterManager = new ClusterManager<Azs>(getActivity(), mMap){
-
-            private long lastCallMs = Long.MIN_VALUE;
-
-            @Override
-            public void onCameraChange(CameraPosition cameraPosition){
-                super.onCameraChange(cameraPosition);
-                final long snap = System.currentTimeMillis();
-                if (lastCallMs + CAMERA_MOVE_REACT_THRESHOLD_MS < snap) {
-                    lastCallMs = snap;
-
-                    refreshAzsList(CONST.CHECK_CHANGES);
-
-                    return;
-                }
-                lastCallMs = snap;
-            }
-        };
-        mClusterManager.setRenderer(new AzsClusterRenderer(getActivity(), mMap, mClusterManager) {
-            @Override
-            protected void onClusterItemRendered(Azs clusterItem, Marker marker) {
-                if (!clusterItem.isUpdatedPrice())
-                    Api.getInstance().getPrice(clusterItem.getId(), getPriceResponse(), AzsBaseMapFragment.this);
-                super.onClusterItemRendered(clusterItem, marker);
-            }
-        });
+        mClusterManager = new ClusterManager<Azs>(getActivity(), mMap);
+        mClusterManager.setRenderer(new AzsClusterRenderer(getActivity(), mMap, mClusterManager));
         mMap.setOnCameraChangeListener(mClusterManager);
         mMap.setOnMarkerClickListener(mClusterManager);
         mMap.getUiSettings().setCompassEnabled(true);
@@ -195,8 +170,8 @@ public abstract class AzsBaseMapFragment
         mClusterManager.setOnClusterItemClickListener(this);
     }
 
-    public void moveToCenterOfRussia() {
-        moveCamera(RUSSIA_LAT, RUSSIA_LNG, CONST.ZOOM_RUSSIA);
+    public void moveToCenterOfUsa() {
+        moveCamera(USA_LAT, USA_LNG, CONST.ZOOM_RUSSIA);
     }
 
     protected void addAzsMarkers(List<Azs> pAzsList) {

@@ -27,16 +27,6 @@ public class FilterHelper {
     }
 
     public static String getFuelTypeForApi(String pFuelForHuman) {
-        String dt = MyApp.getStringFromRes(R.string.fuel_dt);
-        String gas = MyApp.getStringFromRes(R.string.fuel_gas);
-
-        if (pFuelForHuman.equalsIgnoreCase(dt)) {
-            return MyApp.getStringFromRes(R.string.fuel_dt_for_api);
-
-        } else if (pFuelForHuman.equalsIgnoreCase(gas)) {
-            return MyApp.getStringFromRes(R.string.fuel_gas_for_api);
-        }
-
         return pFuelForHuman;
     }
 

@@ -57,7 +57,7 @@ public class CONST {
             NOT_DEFINED                 = -1,
 
             ZOOM_MY_LOCATION            = 10,
-            ZOOM_RUSSIA                 = 4,
+            ZOOM_RUSSIA                 = 12,
 
             MIN_DISTANCE_TO_LOAD_AZS_METERS     = 15000,
             CLOSEST_AZS_RADIUS_METERS           = 20000,

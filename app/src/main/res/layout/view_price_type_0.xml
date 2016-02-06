@@ -9,7 +9,7 @@
     <com.devspark.robototextview.widget.RobotoTextView
         android:id="@+id/view_price_tv_rur"
         style="@style/price_big"
-        android:text="32"
+        android:text="3"
         app:typeface="roboto_bold" />
 
     <com.devspark.robototextview.widget.RobotoTextView

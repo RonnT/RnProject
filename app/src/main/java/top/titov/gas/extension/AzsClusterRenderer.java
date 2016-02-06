@@ -31,12 +31,11 @@ public class AzsClusterRenderer extends DefaultClusterRenderer<Azs>{
     @Override
     protected void onBeforeClusterItemRendered(Azs azs, MarkerOptions markerOptions) {
         markerOptions.anchor(0.5F, 0.5F);
-        float price = azs.isUpdatedPrice() ? azs.getSelectedFuelPrice() : 0;
-        int id = azs.getId();
+        float price = azs.getSelectedFuelPrice();
         int brand = azs.getBrand();
 
         if (price == 0) {
-            int ic_type = brand == CONST.AZS_TYPE_0 ? R.drawable.ic_azs_type_0 : R.drawable.ic_azs_type_1;
+            int ic_type = R.drawable.ic_azs_type_0;
             markerOptions.icon(BitmapDescriptorFactory.fromResource(ic_type));
         } else {
             Bitmap icon = BitmapHelper.getAzsMarkerWithPrice(mContext, price, azs.isFavorite(), brand);

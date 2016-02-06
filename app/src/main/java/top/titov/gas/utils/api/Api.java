@@ -351,7 +351,7 @@ public class Api {
     }
 
     public void getAzsList(Response.Listener<JSONObject> pRL, Response.ErrorListener pEL){
-        sendRequest(GET, "http://devapi.mygasfeed.com/stations/radius/42/-93/40/reg/distance/rfej9napna.json", pRL, pEL);
+        sendRequest(GET, "http://devapi.mygasfeed.com/stations/radius/37.3975/-122.0816/50/reg/distance/rfej9napna.json", pRL, pEL);
     }
 
     /* TODO: do not delete this

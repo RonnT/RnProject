@@ -4,7 +4,7 @@
     <dimen name="filters_elevation">2dp</dimen>
     <dimen name="toolbar_height">56dp</dimen>
 
-    <dimen name="corners_price">2dp</dimen>
+    <dimen name="corners_price">4dp</dimen>
     <dimen name="corners_clustered_count">10dp</dimen>
 
     <dimen name="standart_margin">16dp</dimen>

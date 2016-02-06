@@ -36,8 +36,8 @@
     <string name="no_data">Нет данных</string>
 
     <!-- AZS screen -->
-    <string name="caps_on_map">НА КАРТЕ</string>
-    <string name="caps_on_list">СПИСКОМ</string>
+    <string name="caps_on_map">MAP</string>
+    <string name="caps_on_list">LIST</string>
 
     <!-- Events screen -->
     <string name="caps_events">ПРЕДЛОЖЕНИЯ</string>
@@ -49,18 +49,18 @@
     <string name="read_more_caps">ПОДРОБНЕЕ</string>
     
     <!-- Left menu -->
-    <string name="left_menu_0">АЗС Роснефть</string>
-    <string name="left_menu_1">Избранное</string>
-    <string name="left_menu_2">Акции</string>
-    <string name="left_menu_3">О компании</string>
+    <string name="left_menu_0">Gas stations</string>
+    <string name="left_menu_1">Favorites</string>
+    <string name="left_menu_2">Sale</string>
+    <string name="left_menu_3">About</string>
 
     <!-- Balancer -->
     <string name="proto_postfix">://</string>
 
     <!-- Filter_fuel -->
-    <string name="fuel_92">92</string>
-    <string name="fuel_95">95</string>
-    <string name="fuel_98">98</string>
+    <string name="fuel_92">87</string>
+    <string name="fuel_95">89</string>
+    <string name="fuel_98">93</string>
     <string name="fuel_dt">ДТ</string>
     <string name="fuel_gas">Газ</string>
     <string name="fuel_dt_for_api">diesel</string>
@@ -144,7 +144,7 @@
     <string name="regions_search">Регион</string>
     <string name="current_region">Текущий регион</string>
     <string name="error_determine_region">Невозможно определить регион</string>
-    <string name="caps_route_to_closest_azs">МАРШРУТ ДО БЛИЖАЙШЕЙ АЗС</string>
+    <string name="caps_route_to_closest_azs">ROUTE TO NEAREST GAS STATION</string>
     <string name="no_closest_azs">АЗС в радиусе 20км не обнаружено</string>
     <string name="determine_region">Определение региона...</string>
     <string name="cant_find_region">Регион не найден</string>

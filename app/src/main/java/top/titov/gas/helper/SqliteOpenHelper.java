@@ -20,6 +20,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteException;
+import android.os.Environment;
 import android.util.Log;
 
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
@@ -39,6 +40,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+
+import top.titov.gas.MyApp;
 
 /**
  * A helper class to manage database creation and version management using 
@@ -118,8 +121,8 @@ class SQLiteAssetHelper extends OrmLiteSqliteOpenHelper {
         }
 
         //TODO: for debug mode to get database dump
-       /* mDatabasePath = Environment.getExternalStorageDirectory() + "/Android/data/"
-                + MyApp.getAppContext().getPackageName();*/
+       mDatabasePath = Environment.getExternalStorageDirectory() + "/Android/data/"
+                + MyApp.getAppContext().getPackageName();
 
 
         mUpgradePathFormat = ASSET_DB_PATH + "/" + name + "_upgrade_%s-%s.sql";

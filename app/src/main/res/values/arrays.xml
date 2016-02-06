@@ -27,7 +27,5 @@
         <item>@string/fuel_92</item>
         <item>@string/fuel_95</item>
         <item>@string/fuel_98</item>
-        <item>@string/fuel_dt</item>
-        <item>@string/fuel_gas</item>
     </string-array>
 </resources>

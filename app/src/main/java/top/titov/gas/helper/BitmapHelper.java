@@ -250,13 +250,7 @@ public class BitmapHelper {
     }
 
     public static Bitmap getAzsMarkerWithPrice(Context pContext, float pPrice, boolean pIsFavorite, int brand) {
-        View view;
-        if (brand == CONST.AZS_TYPE_0) {
-            view = LayoutInflater.from(pContext).inflate(R.layout.view_map_azs_with_price_type_0, null);
-        }
-        else {
-            view = LayoutInflater.from(pContext).inflate(R.layout.view_map_azs_with_price_type_1, null);
-        }
+        View view = LayoutInflater.from(pContext).inflate(R.layout.view_map_azs_with_price_type_0, null);
         AQuery aq = new AQuery(view);
         aq.id(R.id.view_marker_price_favorite).visibility(pIsFavorite ? View.VISIBLE : View.GONE);
 

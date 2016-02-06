@@ -217,7 +217,12 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public float getSelectedFuelPrice() {
-        return PriceItem.getPriceItemById(Integer.valueOf(id)).getPriceList().get(FilterHelper.getFuelTypeForApi());
+        float price = 0;
+        try {
+            price = Float.valueOf(regPrice);
+        } catch (Exception e){}
+        //return PriceItem.getPriceItemById(Integer.valueOf(id)).getPriceList().get(FilterHelper.getFuelTypeForApi());
+        return price;
     }
 
     public float getFuelPrice(String pFuelForHuman) {
@@ -300,11 +305,7 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public boolean isUpdatedPrice(){
-        PriceItem priceItem = new PriceItem().getPriceItemById(Integer.valueOf(id));
-        if(priceItem == null || priceItem.getLastUpdate() + CONST.FUEL_PRICE_UPDATE_INTERVAL < Utility.getCurrentTimestamp())
-            return false;
         return true;
-
     }
 
     public static List<Azs> getAzsOnMapWithFilter(Projection pMapProjection) {

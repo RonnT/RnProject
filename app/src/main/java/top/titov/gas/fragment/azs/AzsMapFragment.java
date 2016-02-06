@@ -77,16 +77,16 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
         mAq.id(R.id.fragment_azs_map_btn_route_to_closest).clicked(this);
 
         setupClusterer();
-
+        refreshAzsList(false);
         mLocation = LocationHelper.getCurrentLocation();
-        if (mLocation != null)
-            moveCamera(mLocation.getLatitude(), mLocation.getLongitude(), CONST.ZOOM_MY_LOCATION);
+        /*if (mLocation != null)
+            moveCamera(mLocation.getLatitude(), mLocation.getLongitude(), CONST.ZOOM_MY_LOCATION);*/
         mMap.setOnMapLoadedCallback(this);
     }
 
     @Override
     protected void refreshAzsList(boolean isNeedCheckChanges) {
-        List<Azs> newAzsList = Azs.getAzsOnMapWithFilter(mMap.getProjection());
+        List<Azs> newAzsList = Azs.getAll();
         if (!mAzsList.equals(newAzsList) || !isNeedCheckChanges) {
             mAzsList.clear();
             mAzsList.addAll(newAzsList);
@@ -100,8 +100,8 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
                 switch (intent.getAction()) {
                     case CONST.INTENT_UPDATE_LOCATION:
                         DataManager.getInstance().setMyLocation(LocationHelper.getCurrentLocation());
-                        if (!isMapTouched)
-                            changeMyLocation(false, (int) mMap.getCameraPosition().zoom);
+                       /* if (!isMapTouched)
+                            changeMyLocation(false, (int) mMap.getCameraPosition().zoom);*/
                         break;
                     case CONST.INTENT_UPDATE_AZS:
                         mAzsList.clear();
@@ -128,7 +128,7 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
     public boolean onMarkerClick(Marker marker) {
         return false;
     }
-
+/*
     private void changeMyLocation(boolean pNeedRecreateMyMarker, int pZoom) {
         changeMyLocation(pNeedRecreateMyMarker, pZoom, null);
     }
@@ -147,7 +147,7 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
 
         moveCamToCurrentPosition(pZoom, pCallback);
     }
-
+*/
     @Override
     protected void refreshAzsOnMap() {
         clearMap();
@@ -208,8 +208,10 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
 
     @Override
     public void onMapLoaded() {
-        if (mLocation == null) moveToCenterOfRussia();
-        else {
+        moveToCenterOfUsa();
+        refreshAzsOnMap();
+        //if (mLocation == null) moveToCenterOfUsa();
+        /*else {
             changeMyLocation(true, CONST.ZOOM_MY_LOCATION, new GoogleMap.CancelableCallback() {
                 @Override
                 public void onFinish() {
@@ -219,12 +221,12 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
                 public void onCancel() {
                 }
             });
-        }
+        }*/
     }
 
     @Override
     public void onDataChanged() {
-        refreshAzsOnMap();
+        //refreshAzsOnMap();
     }
 
     @Override
