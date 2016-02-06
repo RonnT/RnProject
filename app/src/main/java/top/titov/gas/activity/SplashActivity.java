@@ -35,10 +35,9 @@ public class SplashActivity extends Activity implements Response.ErrorListener, 
 
     }
 
+
+
     private void runNeededActivity() {
-
-
-
         //SynchronizeHelper.synchronize();
 
         //About.loadingAbout();

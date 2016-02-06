@@ -88,7 +88,6 @@ public class AzsItemActivity extends BaseActivity implements View.OnClickListene
         mCurrentLocation = LocationHelper.getCurrentLocation(false);
         mFuelNames = getResources().getStringArray(R.array.fuel_types);
 
-        setTitle(R.string.caps_azs);
         setupMap();
         fillViews();
     }
@@ -101,7 +100,6 @@ public class AzsItemActivity extends BaseActivity implements View.OnClickListene
         mAq.id(R.id.activity_azs_item_btn_feedback).clicked(this);
         mAq.id(R.id.activity_azs_item_btn_hot_line).clicked(this);
         mAq.id(R.id.view_azs_list_item_address).text(mAzsItem.getAddress());
-        mAq.id(R.id.activity_azs_price_date).text(getPriceActualDate());
 
         AzsHelper.setDistance(mAq, mAzsItem.getDistance());
 
@@ -132,8 +130,6 @@ public class AzsItemActivity extends BaseActivity implements View.OnClickListene
         table.addView(getFuelNamesRow());
         table.addView(dividerView);
         table.addView(getFuelPricesRow(false));
-        table.addView(dividerBrendView);
-        table.addView(getFuelPricesRow(true));
     }
 
     private void deleteFuelPricesTable() {
@@ -171,9 +167,9 @@ public class AzsItemActivity extends BaseActivity implements View.OnClickListene
     }
 
     private boolean theFuelHasPrice(String pFuelName) {
-        float fuelPrice = mAzsItem.getFuelPrice(pFuelName);
-        float foraPrice = mAzsItem.getForaFuelPrice(pFuelName);
-        return fuelPrice != 0f || foraPrice != 0f;
+        return true;
+        /*float fuelPrice = mAzsItem.getFuelPrice(pFuelName);
+        return fuelPrice != 0f || foraPrice != 0f;*/
     }
 
     @SuppressLint("NewApi")

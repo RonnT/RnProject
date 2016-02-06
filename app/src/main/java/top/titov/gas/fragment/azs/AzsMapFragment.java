@@ -35,7 +35,7 @@ import top.titov.gas.utils.api.Api;
 /**
  * Created by Andrew Vasilev on 16.07.2015.
  */
-public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickListener, GoogleMap.OnMapLoadedCallback, IObservable, IMapTouchObserver {
+public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickListener, GoogleMap.OnMapLoadedCallback, IObservable, IMapTouchObserver, GoogleMap.OnMapClickListener{
 
     private ObservableList<Azs> mAzsList = DataManager.getInstance().getAzsList(this);
     private BroadcastReceiver mAzsBr;
@@ -82,6 +82,7 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
         /*if (mLocation != null)
             moveCamera(mLocation.getLatitude(), mLocation.getLongitude(), CONST.ZOOM_MY_LOCATION);*/
         mMap.setOnMapLoadedCallback(this);
+        mMap.setOnMapClickListener(this);
     }
 
     @Override
@@ -238,5 +239,10 @@ public class AzsMapFragment extends AzsBaseMapFragment implements View.OnClickLi
         isMapTouched = true;
         mAq.id(R.id.fragment_azs_map_btn_route_to_closest).gone();
         return false;
+    }
+
+    @Override
+    public void onMapClick(LatLng latLng) {
+        ToastHelper.showToast("Lat: "+ latLng.latitude + "Lng: "+latLng.longitude);
     }
 }

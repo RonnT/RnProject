@@ -52,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void applicationWillEnterForeground() {
         if (isAppWentToBg) {
             isAppWentToBg = false;
-            SynchronizeHelper.synchronize();
+            //SynchronizeHelper.synchronize();
             actionOnForeground();
             //Toast.makeText(getApplicationContext(), "App is in foreground", Toast.LENGTH_SHORT).show();
         }

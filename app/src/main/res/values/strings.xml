@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Gas stations</string>
+    <string name="app_name">Shell</string>
 
     <!-- LoadingDialog -->
     <string name="loading">Загрузка…</string>
@@ -40,8 +40,8 @@
     <string name="caps_on_list">LIST</string>
 
     <!-- Events screen -->
-    <string name="caps_events">ПРЕДЛОЖЕНИЯ</string>
-    <string name="caps_products">ТОВАРЫ</string>
+    <string name="caps_events">SALE</string>
+    <string name="caps_products">GOODS</string>
     <string name="events_federal">Федеральные</string>
     <string name="events_regional">Региональные</string>
     <string name="product_title">Товар</string>
@@ -49,7 +49,7 @@
     <string name="read_more_caps">ПОДРОБНЕЕ</string>
     
     <!-- Left menu -->
-    <string name="left_menu_0">Gas stations</string>
+    <string name="left_menu_0">Shell</string>
     <string name="left_menu_1">Favorites</string>
     <string name="left_menu_2">Sale</string>
     <string name="left_menu_3">About</string>
@@ -90,18 +90,18 @@
     <string name="html_end"><![CDATA[ </html> ]]></string>
 	
     <string name="error_unknown">Произошла неизвестная ошибка</string>
-    <string name="caps_add_to_fav">ДОБАВИТЬ В ИЗБРАННОЕ</string>
-    <string name="caps_remove_from_fav">УДАЛИТЬ ИЗ ИЗБРАННОГО</string>
+    <string name="caps_add_to_fav">ADD TO FAVORITES</string>
+    <string name="caps_remove_from_fav">REMOVE FROM FAVORITES</string>
     <string name="try_again">Повторить</string>
 
     <!-- Azs Item Activity -->
-    <string name="caps_azs">АЗС</string>
+    <string name="caps_azs">GAS STATION</string>
     <string name="opened">Открыто</string>
     <string name="closed">Закрыто</string>
     <string name="schedule_fulltime">Работает круглосуточно</string>
     <string name="schedule_from">"c "</string>
     <string name="schedule_to">" до "</string>
-    <string name="fuel_prices">Цены на топливо: </string>
+    <string name="fuel_prices">Gas prices: </string>
     <string name="fuel_prices_actual_on">"актуальны на "</string>
 
     <string name="day_1">mon</string>
@@ -111,8 +111,8 @@
     <string name="day_5">fri</string>
     <string name="day_6">sut</string>
     <string name="day_7">sun</string>
-    <string name="caps_write_feedback">НАПИСАТЬ ОТЗЫВ</string>
-    <string name="caps_hot_line">ГОРЯЧАЯ ЛИНИЯ</string>
+    <string name="caps_write_feedback">FEEDBACK</string>
+    <string name="caps_hot_line">CALL CENTER</string>
     <string name="hot_line_number">88002001070</string>
 
     <string name="rate_phone">Телефон</string>

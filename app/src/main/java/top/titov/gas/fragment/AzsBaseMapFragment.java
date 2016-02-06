@@ -50,8 +50,8 @@ public abstract class AzsBaseMapFragment
     private static int CAMERA_MOVE_REACT_THRESHOLD_MS = 500;
 
     private double
-            USA_LAT = 42.005018,
-            USA_LNG = -93.609851;
+            USA_LAT = 37.389984,
+            USA_LNG = -122.068698;
 
 
     protected GoogleMap mMap;
@@ -171,7 +171,7 @@ public abstract class AzsBaseMapFragment
     }
 
     public void moveToCenterOfUsa() {
-        moveCamera(USA_LAT, USA_LNG, CONST.ZOOM_RUSSIA);
+        moveCamera(USA_LAT, USA_LNG, CONST.ZOOM_CALIFORNIA);
     }
 
     protected void addAzsMarkers(List<Azs> pAzsList) {

@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.Callable;
 
 import top.titov.gas.helper.FilterHelper;
@@ -69,6 +70,9 @@ public class Azs implements ClusterItem, Serializable {
 
     @DatabaseField
     private String lng;
+
+    @DatabaseField
+    private String region;
 
     @DatabaseField(columnName = "reg_price")
     @SerializedName("reg_price")
@@ -169,6 +173,8 @@ public class Azs implements ClusterItem, Serializable {
         return email;
     }
 
+    public String getRegion(){return region;}
+
     public double getLat() {
         return Double.valueOf(lat);
     }
@@ -226,7 +232,25 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public float getFuelPrice(String pFuelForHuman) {
-        return PriceItem.getPriceItemById(Integer.valueOf(id)).getPriceList().get(FilterHelper.getFuelTypeForApi(pFuelForHuman));
+        float price = 0;
+        switch (pFuelForHuman){
+            case "87":
+                try {
+                    price = Float.valueOf(regPrice);
+                } catch (Exception e){}
+                break;
+            case "89":
+                try {
+                    price = Float.valueOf(midPrice);
+                } catch (Exception e){}
+                break;
+            case "93":
+                try {
+                    price = Float.valueOf(prePrice);
+                } catch (Exception e){}
+                break;
+        }
+        return price;
     }
 
     public float getForaFuelPrice(String pFuelForHuman) {
@@ -270,6 +294,12 @@ public class Azs implements ClusterItem, Serializable {
     }
 
     public void save(Dao<Azs, Integer> pDao) throws SQLException {
+        Random rand=new Random();
+        shop = 1;
+        cafe = rand.nextInt(1);
+        wash = rand.nextInt(1);
+        tire = rand.nextInt(1);
+        visa = 1;
         pDao.createOrUpdate(this);
     }
 

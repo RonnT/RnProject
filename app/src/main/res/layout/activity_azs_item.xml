@@ -88,7 +88,8 @@
                         android:layout_marginLeft="@dimen/small_margin"
                         android:layout_toRightOf="@+id/activity_azs_price_title"
                         android:layout_marginBottom="@dimen/small_margin"
-                        android:text="актуальны на" />
+                        android:text="актуальны на"
+                        android:visibility="gone"/>
 
                 </RelativeLayout>
 

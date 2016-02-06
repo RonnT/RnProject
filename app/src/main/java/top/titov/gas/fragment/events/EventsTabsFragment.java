@@ -38,7 +38,7 @@ public class EventsTabsFragment extends BaseTabsFragment implements View.OnClick
     private static final int NEED_SWITCH_TAB = 2;
 
     private static Location sLocation = null;
-    private Region mRegion = Region.getByRegionId(PrefsHelper.getInstance().getUserRegionId());
+    private Region mRegion = Region.getByRegionId(5);
     private int stateSwitch = 0;
 
     @Override
@@ -93,33 +93,9 @@ public class EventsTabsFragment extends BaseTabsFragment implements View.OnClick
 
     private void saveNewRegion() {
         PrefsHelper.getInstance().setUserRegionId(mRegion.getRegionId());
-        Api.getInstance().setRegion(mRegion.getRegionId() ,getSetRegionResponseListener(),getSetRegionErrorListener());
+        //Api.getInstance().setRegion(mRegion.getRegionId() ,getSetRegionResponseListener(),getSetRegionErrorListener());
         for (Fragment fragment : getChildFragmentManager().getFragments())
             ((IObservable) fragment).onDataChanged();
-    }
-
-    private Response.Listener<JSONObject> getSetRegionResponseListener(){
-        return new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                SimpleWrapper wrapper = new Gson().fromJson(response.toString(), SimpleWrapper.class);
-                if(wrapper.getErrorCode() == CONST.ERROR_CODE_OK){
-                    PrefsHelper.getInstance().setUserRegionId(mRegion.getRegionId());
-                    mAq.id(R.id.regions_button).text(mRegion.getName());
-                } else {
-                    ToastHelper.showToast(R.string.error_unknown);
-                }
-            }
-        };
-    }
-
-    private Response.ErrorListener getSetRegionErrorListener(){
-        return new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        };
     }
 
     @Override
